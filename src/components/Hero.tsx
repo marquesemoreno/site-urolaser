@@ -1,29 +1,27 @@
 import React from "react";
 import { MessageCircle, Stethoscope, ShieldCheck, Sparkles } from "lucide-react";
-import NetworkMesh from "@/components/visual/NetworkMesh";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
-      {/* Assinatura visual discreta (herança de rede, verde sutil) */}
-      <NetworkMesh />
+      {/* Fundo limpo (sem pontos de rede) — foco no conteúdo */}
 
       <div className="container mx-auto px-8 md:px-16 lg:px-24 py-20 pb-28 relative">
         <div className="flex flex-col space-y-8 max-w-3xl">
-          {/* Badge de acolhedor — verde pontual */}
+          {/* Badge de acolhimento — petróleo pontual */}
           <span className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
             <Sparkles className="h-4 w-4" />
             Urologia Avançada · Vitória da Conquista, BA
           </span>
 
-          {/* Título em Fraunces (serif) — acolhedor, sem gradiente */}
+          {/* Título em Montserrat (sans geométrica) — marca, sem gradiente */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight tracking-tight font-display">
             Cuidado especializado em{" "}
             <span className="text-primary">urologia</span>, com a{" "}
             <span className="font-medium">tecnologia a laser</span> que você merece.
           </h1>
 
-          {/* Subtítulo — Poppins, neutro e sóbrio (info clínica) */}
+          {/* Subtítulo — Montserrat, neutro e sóbrio (info clínica) */}
           <p className="text-lg md:text-xl text-muted-foreground max-w-xl font-body leading-relaxed">
             Atendimento humanizado pelo <strong className="font-semibold text-foreground">Dr. Alan Pascoal</strong> e equipe multidisciplinar.
             Diagnóstico preciso, tratamentos minimamente invasivos e recuperação com conforto.

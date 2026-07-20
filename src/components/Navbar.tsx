@@ -44,7 +44,7 @@ const Navbar = () => {
             <img
               src="/logo-urolaser.png"
               alt="Urolaser — Especialidades Médicas"
-              className="h-9 w-auto transition-opacity duration-300 group-hover:opacity-80"
+              className="h-12 w-auto transition-opacity duration-300 group-hover:opacity-80"
             />
           </Link>
 

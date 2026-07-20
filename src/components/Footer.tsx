@@ -15,7 +15,7 @@ const Footer = () => {
               <img
                 src="/logo-urolaser.png"
                 alt="Urolaser — Especialidades Médicas"
-                className="h-10 w-auto"
+                className="h-12 w-auto"
               />
             </div>
             <p className="text-foreground/80 text-sm leading-relaxed text-center sm:text-left">
