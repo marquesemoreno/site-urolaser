@@ -12,13 +12,11 @@ const Footer = () => {
           {/* Coluna 1: Clínica */}
           <div className="flex flex-col items-center rounded-2xl border border-border bg-white p-6 sm:items-start">
             <div className="flex items-center gap-3 mb-4">
-              <span className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 ring-2 ring-primary/20">
-                <Activity className="h-6 w-6 text-primary" />
-              </span>
-              <div>
-                <h2 className="text-xl font-bold text-foreground leading-tight">URO<span className="text-primary">LASER</span></h2>
-                <p className="text-sm text-muted-foreground">Especialidades Médicas</p>
-              </div>
+              <img
+                src="/logo-urolaser.png"
+                alt="Urolaser — Especialidades Médicas"
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-foreground/80 text-sm leading-relaxed text-center sm:text-left">
               Urologia avançada, ginecologia, proctologia e muito mais — com tecnologia a laser e atendimento humanizado.

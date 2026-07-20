@@ -40,13 +40,12 @@ const Navbar = () => {
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center gap-3 group">
-            {/* Logo Urolaser (texto, até a logo definitiva chegar) */}
-            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 ring-2 ring-primary/20 transition-all duration-300 group-hover:ring-primary/50">
-              <Activity className="h-5 w-5 text-primary" />
-            </span>
-            <span className="text-xl font-bold tracking-tight text-foreground">
-              URO<span className="text-primary">LASER</span>
-            </span>
+            {/* Logo oficial Urolaser (wordmark verde, fundo transparente) */}
+            <img
+              src="/logo-urolaser.png"
+              alt="Urolaser — Especialidades Médicas"
+              className="h-9 w-auto transition-opacity duration-300 group-hover:opacity-80"
+            />
           </Link>
 
           <div className="hidden md:flex items-center space-x-10">
