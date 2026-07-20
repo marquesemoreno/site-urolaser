@@ -40,7 +40,7 @@ const Navbar = () => {
       <div className="container mx-auto px-8 md:px-16 lg:px-24">
         <div className="flex justify-between items-center">
           <Link to="/" className="flex items-center gap-3 group">
-            {/* Logo oficial Urolaser (wordmark verde, fundo transparente) */}
+            {/* Logo oficial Urolaser (wordmark petróleo #016179, fundo transparente) */}
             <img
               src="/logo-urolaser.png"
               alt="Urolaser — Especialidades Médicas"

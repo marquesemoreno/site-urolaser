@@ -1,10 +1,9 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --font-display: "Fraunces", "Iowan Old Style", "Segoe UI", Georgia, serif;
-  --font-body: "Poppins", "Segoe UI", system-ui, sans-serif;
+  --font-display: "Montserrat", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Montserrat", "Segoe UI", system-ui, sans-serif;
 }
 
 @tailwind base;
@@ -12,10 +11,10 @@
 @tailwind utilities;
 
 @layer base {
-  /* Urolaser — Direção A: Clínica Premium Quente.
-     Fundo marfim/off-white; verde-saúde + terracota/âmbar como ACENTO PONTUAL
-     (CTAs, selos de credencial, ícones), NÃO cor de fundo dominante.
-     Tipografia: Fraunces (serif, acolhedor) nos títulos + Poppins (corpo, limpo). */
+  /* Urolaser — Identidade oficial: azul-petróleo #016179 (marca estabelecida).
+     Fundo marfim/off-white mantido. Sans-serif geométrica (Montserrat) em títulos
+     e corpo (pesos diferenciados para hierarquia). Terracota/âmbar SÓ em detalhe
+     pontual (badge "Formação internacional"), nunca em CTA principal. */
   :root {
     --background: 40 33% 97%;          /* marfim claro */
     --foreground: 200 30% 12%;         /* texto quase-preto azulado, sóbrio */
@@ -26,18 +25,18 @@
     --popover: 0 0% 100%;
     --popover-foreground: 200 30% 12%;
 
-    /* Verde-saúde (marca, acento pontual) */
-    --primary: 152 55% 38%;            /* verde folha profundo */
+    /* Azul-petróleo (marca oficial Urolaser) */
+    --primary: 190 98% 21%;            /* #016179 */
     --primary-foreground: 40 33% 98%;
 
-    /* Terracota/âmbar (acento quente secundário) */
+    /* Terracota/âmbar (acento quente secundário, USO PONTUAL) */
     --secondary: 18 75% 52%;
     --secondary-foreground: 40 33% 98%;
 
     --muted: 40 20% 92%;
     --muted-foreground: 200 12% 38%;
 
-    --accent: 152 55% 38%;
+    --accent: 190 98% 21%;
     --accent-foreground: 40 33% 98%;
 
     --destructive: 0 72% 48%;
@@ -45,7 +44,7 @@
 
     --border: 200 18% 85%;
     --input: 200 18% 85%;
-    --ring: 152 55% 38%;
+    --ring: 190 98% 21%;
 
     --radius: 0.7rem;
   }
@@ -184,11 +183,11 @@
     @apply bg-white border border-border rounded-2xl shadow-sm;
   }
 
-  /* Textura de grid fino e discreto em verde (herança de rede, pontual) */
+  /* Textura de grid fino e discreto em petróleo (herança de rede, pontual) */
   .bg-grid {
     background-image:
-      linear-gradient(to right, rgba(21,128,84,0.06) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(21,128,84,0.06) 1px, transparent 1px);
+      linear-gradient(to right, rgba(1,97,121,0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(1,97,121,0.06) 1px, transparent 1px);
     background-size: 46px 46px;
   }
   .bg-grid-fade {
@@ -207,9 +206,9 @@
   .font-body { font-family: var(--font-body); }
 }
 
-/* Respiro sutil da topologia (só no hero) — verde, sem glow */
+/* Respiro sutil da topologia (só no hero) — petróleo, sem glow */
 .net-breathe {
-  background: radial-gradient(circle at 72% 32%, rgba(21,128,84,0.08), transparent 55%);
+  background: radial-gradient(circle at 72% 32%, rgba(1,97,121,0.08), transparent 55%);
 }
 @keyframes net-breathe {
   0%, 100% { opacity: 0.35; }

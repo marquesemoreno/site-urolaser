@@ -107,8 +107,8 @@ export default {
         'slide-up': 'slide-up 0.7s ease-out forwards',
       },
       fontFamily: {
-        sans: ['Poppins', 'Segoe UI', 'system-ui', 'sans-serif'],
-        display: ['Fraunces', 'Iowan Old Style', 'Georgia', 'serif'],
+        sans: ['Montserrat', 'Segoe UI', 'system-ui', 'sans-serif'],
+        display: ['Montserrat', 'Segoe UI', 'system-ui', 'sans-serif'],
       },
       fontWeight: {
         'extra-bold': '800',
