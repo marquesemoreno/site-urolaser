@@ -54,13 +54,8 @@ const Services = () => {
       <div className="bg-grid bg-grid-fade absolute inset-0 -z-10 opacity-50" aria-hidden="true" />
 
       <div className="container mx-auto relative">
-        <div className="inline-block mb-4">
-          <span className="text-xs font-semibold tracking-[0.25em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-violet-400">
-            Cuidado completo
-          </span>
-        </div>
         <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white tracking-tight font-display">
-          NOSSAS <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-violet-400 to-emerald-400">ESPECIALIDADES</span>
+          NOSSAS ESPECIALIDADES
         </h2>
         <p className="text-xl text-white/70 mb-16 max-w-3xl font-light leading-relaxed">
           Uma equipe multidisciplinar para cuidar de você em todas as frentes da saúde,
@@ -106,8 +101,8 @@ const Services = () => {
               key={i}
               className="group flex items-start gap-4 rounded-xl border border-white/10 bg-white/[0.03] p-5 transition-all duration-300 hover:border-white/25 hover:bg-white/[0.06]"
             >
-              <span className="font-display text-2xl font-bold leading-none text-transparent bg-clip-text bg-gradient-to-br from-cyan-400/70 to-violet-400/70 group-hover:from-cyan-300 group-hover:to-violet-300 transition-all duration-300">
-                {String(i + 1).padStart(2, "0")}
+              <span className="font-display text-2xl font-bold leading-none text-cyan-300/70 transition-all duration-300">
+                {s.icon}
               </span>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1.5">

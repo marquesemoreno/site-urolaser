@@ -44,7 +44,7 @@ const Contact = () => {
             Fale com a gente
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white tracking-tight">
-            Agende sua <span className="bg-gradient-to-r from-cyan-300 to-violet-400 bg-clip-text text-transparent">consulta</span>
+            Agende sua <span className="text-cyan-300">consulta</span>
           </h2>
           <p className="text-xl text-white/80 mb-16 max-w-3xl mx-auto font-medium">
             Tire dúvidas ou marque seu atendimento. Atendimento particular, com acolhimento e tecnologia a laser.

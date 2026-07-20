@@ -20,17 +20,14 @@ const Hero = () => {
 
       <div className="container mx-auto px-8 md:px-16 lg:px-24 py-20">
         <div className="flex flex-col space-y-10 max-w-3xl animate-slide-up">
-          <span className="inline-flex w-fit items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-200 backdrop-blur-md">
+          <span className="inline-flex w-fit items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-sm font-medium text-cyan-100 backdrop-blur-md">
             <Sparkles className="h-4 w-4 text-cyan-300" />
             Urologia Avançada · Vitória da Conquista, BA
           </span>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
             Cuidado especializado em{" "}
-            <span
-              className="bg-clip-text text-transparent"
-              style={{ backgroundImage: "linear-gradient(to right, #22d3ee, #8b5cf6)" }}
-            >
+            <span className="text-cyan-300">
               urologia com tecnologia a laser
             </span>
           </h1>

@@ -54,13 +54,8 @@ const Team = () => {
       <div className="bg-grid bg-grid-fade absolute inset-0 -z-10 opacity-50" aria-hidden="true" />
 
       <div className="container mx-auto relative">
-        <div className="inline-block mb-4">
-          <span className="text-xs font-semibold tracking-[0.25em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-violet-400">
-            Quem atende você
-          </span>
-        </div>
         <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white tracking-tight font-display">
-          NOSSA <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-violet-400 to-emerald-400">EQUIPE</span>
+          NOSSA EQUIPE
         </h2>
         <p className="text-xl text-white/70 mb-16 max-w-3xl font-light leading-relaxed">
           Profissionais experientes e humanizados, prontos para cuidar da sua saúde com excelência e tecnologia.
@@ -74,7 +69,7 @@ const Team = () => {
               <img
                 src={lead.photo}
                 alt={`${lead.name} — ${lead.role}`}
-                className="w-full h-64 sm:h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                className="w-full h-64 sm:h-full object-cover object-top"
                 loading="lazy"
               />
             </div>
@@ -101,7 +96,7 @@ const Team = () => {
                 <img
                   src={m.photo}
                   alt={`${m.name} — ${m.role}`}
-                  className="w-full h-72 object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-72 object-cover object-top"
                   loading="lazy"
                 />
                 <div className="pointer-events-none absolute inset-x-0 top-0 h-72 bg-gradient-to-t from-[#0a0e1a] via-transparent to-transparent opacity-60" />

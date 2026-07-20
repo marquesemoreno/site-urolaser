@@ -34,13 +34,8 @@ const Treatments = () => {
       <div className="bg-grid bg-grid-fade absolute inset-0 -z-10 opacity-50" aria-hidden="true" />
 
       <div className="container mx-auto relative">
-        <div className="inline-block mb-4">
-          <span className="text-xs font-semibold tracking-[0.25em] uppercase text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
-            O que tratamos
-          </span>
-        </div>
         <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white tracking-tight font-display">
-          TRATAMENTOS <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-violet-400 to-emerald-400">ESPECIALIZADOS</span>
+          TRATAMENTOS ESPECIALIZADOS
         </h2>
         <p className="text-xl text-white/70 mb-16 max-w-3xl font-light leading-relaxed">
           Urologia avançada com tecnologia a laser e acompanhamento humanizado,
