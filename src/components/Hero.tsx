@@ -7,49 +7,69 @@ const Hero = () => {
       {/* Fundo limpo (sem pontos de rede) — foco no conteúdo */}
 
       <div className="container mx-auto px-8 md:px-16 lg:px-24 py-20 pb-28 relative">
-        <div className="flex flex-col space-y-8 max-w-3xl">
-          {/* Badge de acolhimento — petróleo pontual */}
-          <span className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
-            <Sparkles className="h-4 w-4" />
-            Urologia Avançada · Vitória da Conquista, BA
-          </span>
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+          {/* Coluna esquerda: conteúdo de texto */}
+          <div className="flex flex-col space-y-8 max-w-xl">
+            {/* Badge de acolhimento — petróleo pontual */}
+            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
+              <Sparkles className="h-4 w-4" />
+              Urologia Avançada · Vitória da Conquista, BA
+            </span>
 
-          {/* Título em Montserrat (sans geométrica) — marca, sem gradiente */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight tracking-tight font-display">
-            Cuidado especializado em{" "}
-            <span className="text-primary">urologia</span>, com a{" "}
-            <span className="font-medium">tecnologia a laser</span> que você merece.
-          </h1>
+            {/* Título em Montserrat (sans geométrica) — marca, sem gradiente */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight tracking-tight font-display">
+              Cuidado especializado em{" "}
+              <span className="text-primary">urologia</span>, com a{" "}
+              <span className="font-medium">tecnologia a laser</span> que você merece.
+            </h1>
 
-          {/* Subtítulo — Montserrat, neutro e sóbrio (info clínica) */}
-          <p className="text-lg md:text-xl text-muted-foreground max-w-xl font-body leading-relaxed">
-            Atendimento humanizado pelo <strong className="font-semibold text-foreground">Dr. Alan Pascoal</strong> e equipe multidisciplinar.
-            Diagnóstico preciso, tratamentos minimamente invasivos e recuperação com conforto.
-          </p>
+            {/* Subtítulo — Montserrat, neutro e sóbrio (info clínica) */}
+            <p className="text-lg md:text-xl text-muted-foreground max-w-xl font-body leading-relaxed">
+              Atendimento humanizado pelo <strong className="font-semibold text-foreground">Dr. Alan Pascoal</strong> e equipe multidisciplinar.
+              Diagnóstico preciso, tratamentos minimamente invasivos e recuperação com conforto.
+            </p>
 
-          <div className="flex pt-2">
-            <a
-              href="https://wa.me/5577999257550"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary"
-            >
-              <MessageCircle className="h-4 w-4" />
-              Agendar pelo WhatsApp
-            </a>
+            <div className="flex pt-2">
+              <a
+                href="https://wa.me/5577999257550"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                <MessageCircle className="h-4 w-4" />
+                Agendar pelo WhatsApp
+              </a>
+            </div>
+
+            {/* Selos de credencial — tipografia NEUTRA e sóbria (restrição do cliente) */}
+            <div className="flex flex-wrap gap-4 pt-2 text-xs font-medium text-muted-foreground">
+              <span className="inline-flex items-center gap-2 rounded-xl border border-border bg-white px-3 py-2 credential">
+                <Stethoscope className="h-4 w-4 text-primary" /> CRM-BA 27945
+              </span>
+              <span className="inline-flex items-center gap-2 rounded-xl border border-border bg-white px-3 py-2 credential">
+                <ShieldCheck className="h-4 w-4 text-secondary" /> Formação internacional
+              </span>
+              <span className="inline-flex items-center gap-2 rounded-xl border border-border bg-white px-3 py-2 credential">
+                <Sparkles className="h-4 w-4 text-primary" /> Tecnologia a laser
+              </span>
+            </div>
           </div>
 
-          {/* Selos de credencial — tipografia NEUTRA e sóbria (restrição do cliente) */}
-          <div className="flex flex-wrap gap-4 pt-2 text-xs font-medium text-muted-foreground">
-            <span className="inline-flex items-center gap-2 rounded-xl border border-border bg-white px-3 py-2 credential">
-              <Stethoscope className="h-4 w-4 text-primary" /> CRM-BA 27945
-            </span>
-            <span className="inline-flex items-center gap-2 rounded-xl border border-border bg-white px-3 py-2 credential">
-              <ShieldCheck className="h-4 w-4 text-secondary" /> Formação internacional
-            </span>
-            <span className="inline-flex items-center gap-2 rounded-xl border border-border bg-white px-3 py-2 credential">
-              <Sparkles className="h-4 w-4 text-primary" /> Tecnologia a laser
-            </span>
+          {/* Coluna direita: vídeo vertical da clínica (recepção) */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative w-[260px] sm:w-[300px] md:w-[320px] aspect-[9/16] overflow-hidden rounded-3xl border border-border bg-black shadow-xl">
+              <video
+                className="h-full w-full object-cover"
+                src="/video/clinica-recepcao.mp4"
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="metadata"
+              />
+              {/* Overlay/gradiente na base — profundidade sutil */}
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/40 to-transparent" />
+            </div>
           </div>
         </div>
       </div>
