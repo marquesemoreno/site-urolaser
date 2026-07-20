@@ -40,6 +40,12 @@ const team = [
     crm: "CRP 03/11725",
     photo: "/equipe/ione-freitas.jpg",
   },
+  {
+    name: "Dra. Thamiris Carvalho",
+    role: "Clínica Geral · Emagrecimento e Obesidade",
+    crm: "CRM 49159",
+    photo: "/equipe/dra-thamiris-carvalho.jpg",
+  },
 ];
 
 const Team = () => {
