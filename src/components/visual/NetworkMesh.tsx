@@ -56,12 +56,12 @@ const NetworkMesh = () => {
         </g>
         <defs>
           <linearGradient id="netStroke" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="#a855f7" stopOpacity="0.55" />
-            <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.55" />
+            <stop offset="0%" stopColor="#15804f" stopOpacity="0.45" />
+            <stop offset="100%" stopColor="#bf5c2a" stopOpacity="0.45" />
           </linearGradient>
           <radialGradient id="netNode">
-            <stop offset="0%" stopColor="#d8b4fe" />
-            <stop offset="100%" stopColor="#3b82f6" />
+            <stop offset="0%" stopColor="#15804f" />
+            <stop offset="100%" stopColor="#bf5c2a" />
           </radialGradient>
         </defs>
       </svg>

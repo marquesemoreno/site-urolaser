@@ -1,94 +1,58 @@
-
 import React from "react";
-import { ArrowRight } from "lucide-react";
+import { Check } from "lucide-react";
 
-const tiers = [
+const plans = [
   {
-    label: "Até 5 máquinas",
-    value: "R$ 400",
-    sub: "Valor fixo (inclui até 4h presencial/mês)",
-  },
-  {
-    label: "Até 10 máquinas",
-    value: "R$ 70 / máq.",
-    sub: "Por máquina (inclui até 8h presencial/mês)",
-  },
-  {
-    label: "Até 20 máquinas",
-    value: "R$ 60 / máq.",
-    sub: "Por máquina (inclui até 12h presencial/mês)",
-  },
-  {
-    label: "Mais de 20 máquinas",
-    value: "Consultar",
-    sub: "Entre em contato para uma proposta personalizada",
+    name: "Plano Particular",
+    price: "Consulte",
+    description: "Atendimento humanizado, sem plano de saúde, com tecnologia a laser.",
+    features: [
+      "Consulta com o Dr. Alan Pascoal (Urologia)",
+      "Agendamento flexível pelo WhatsApp",
+      "Acompanhamento pós-consulta",
+      "Laudos e exames detalhados",
+    ],
   },
 ];
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="bg-background px-8 md:px-16 lg:px-24 py-24 md:py-32">
+    <section id="planos" className="relative overflow-hidden px-8 md:px-16 lg:px-24 py-24 md:py-32">
+      <div className="bg-grid bg-grid-fade absolute inset-0 -z-10 opacity-40" aria-hidden="true" />
+
       <div className="container mx-auto">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-light mb-6 text-white tracking-tight">
-            PLANOS E PREÇOS
-          </h2>
-          <p className="text-xl text-white/80 font-light">
-            Escolha o pacote ideal para sua empresa. Suporte especializado, presencial e remoto, sob medida.
-          </p>
-        </div>
+        <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-foreground tracking-tight font-display">
+          Atendimento particular
+        </h2>
+        <p className="text-xl text-muted-foreground mb-16 max-w-3xl font-light">
+          Cuidado especializado com agendamento direto, sem burocracia de planos de saúde.
+        </p>
 
-        <div className="max-w-3xl mx-auto">
-          <div className="border border-white/10 rounded-2xl overflow-hidden bg-background-light/50 hover:bg-background-light hover:border-white/20 transition-all duration-300 shadow-xl">
-            <div className="p-8 md:p-12 border-b border-white/10 text-center">
-              <h3 className="text-white text-2xl md:text-3xl font-light mb-3 tracking-tight">
-                PLANO HÍBRIDO
-              </h3>
-              <p className="text-white/70 text-sm md:text-base font-light">
-                Ideal para empresas que precisam de suporte remoto e presencial
-              </p>
-            </div>
-
-            <div className="p-6 md:p-12">
-              <ul className="divide-y divide-white/10">
-                {tiers.map((t) => (
-                  <li
-                    key={t.label}
-                    className="group py-5 md:py-6 px-2 md:px-4 rounded-lg transition-all duration-300 hover:bg-white/5 hover:px-4 md:hover:px-6"
-                  >
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1 md:gap-6">
-                      <span className="font-light text-white text-base md:text-lg">
-                        {t.label}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {plans.map((plan, i) => (
+            <div
+              key={i}
+              className="border border-border rounded-2xl bg-white overflow-hidden shadow-sm hover:border-primary/40 transition-all duration-300"
+            >
+              <div className="p-6 border-b border-border">
+                <h3 className="text-foreground text-2xl font-semibold tracking-tight font-display">{plan.name}</h3>
+                <p className="text-muted-foreground text-sm font-light mt-1">{plan.description}</p>
+              </div>
+              <div className="p-6">
+                <p className="text-xl font-semibold text-foreground">{plan.price}</p>
+                <ul className="mt-4 space-y-3">
+                  {plan.features.map((f, idx) => (
+                    <li key={idx} className="flex items-start gap-3 text-sm text-muted-foreground">
+                      <span className="mt-0.5 inline-flex items-center justify-center w-5 h-5 shrink-0 rounded-full bg-primary/10 text-primary">
+                        <Check className="w-3 h-3" />
                       </span>
-                      <span className="text-xl md:text-2xl font-light text-white whitespace-nowrap">
-                        {t.value}
-                      </span>
-                    </div>
-                    <p className="text-sm text-white/60 font-light mt-2">
-                      {t.sub}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-10 flex justify-center">
-                <a
-                  href="#contact"
-                  className="inline-flex items-center"
-                >
-                  <fluent-button
-                    appearance="accent"
-                    style={{ height: "52px", padding: "0 40px", borderRadius: "9999px", fontSize: "14px", fontWeight: "700" }}
-                  >
-                    <span style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
-                      SOLICITAR PROPOSTA
-                      <ArrowRight style={{ width: "20px", height: "20px" }} />
-                    </span>
-                  </fluent-button>
-                </a>
+                      {f}
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

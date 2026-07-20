@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { FileText } from "lucide-react";
@@ -10,18 +9,15 @@ interface BlogSidebarProps {
 
 const BlogSidebar = ({ categories }: BlogSidebarProps) => {
   return (
-    <Card className="bg-background-light border-white/10">
+    <Card className="bg-white border-border">
       <CardHeader>
-        <CardTitle className="text-xl">Categorias</CardTitle>
+        <CardTitle className="text-xl text-foreground">Categorias</CardTitle>
       </CardHeader>
       <CardContent>
         <ul className="space-y-2">
           {categories.map((category) => (
             <li key={category}>
-              <Link 
-                to="#" 
-                className="flex items-center text-white/80 hover:text-white transition-colors"
-              >
+              <Link to="#" className="flex items-center text-muted-foreground hover:text-primary transition-colors">
                 <FileText className="h-4 w-4 mr-2" />
                 {category}
               </Link>

@@ -1,39 +1,31 @@
 import React from "react";
-import { MessageCircle, Stethoscope, Sparkles, ShieldCheck } from "lucide-react";
+import { MessageCircle, Stethoscope, ShieldCheck, Sparkles } from "lucide-react";
 import NetworkMesh from "@/components/visual/NetworkMesh";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center pt-16 overflow-hidden font-display">
-      {/* Assinatura visual: topologia sutil (tom ciano/violeta — saúde + tecnologia) */}
+    <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
+      {/* Assinatura visual discreta (herança de rede, verde sutil) */}
       <NetworkMesh />
 
-      {/* Overlay para legibilidade (paleta ciano/violeta) */}
-      <div
-        className="pointer-events-none absolute inset-0 -z-[5]"
-        style={{
-          background:
-            "linear-gradient(to right, rgba(8,18,24,0.93) 0%, rgba(10,16,30,0.80) 45%, rgba(10,20,32,0.55) 100%)",
-        }}
-        aria-hidden="true"
-      />
-
-      <div className="container mx-auto px-8 md:px-16 lg:px-24 py-20">
-        <div className="flex flex-col space-y-10 max-w-3xl animate-slide-up">
-          <span className="inline-flex w-fit items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-sm font-medium text-cyan-100 backdrop-blur-md">
-            <Sparkles className="h-4 w-4 text-cyan-300" />
+      <div className="container mx-auto px-8 md:px-16 lg:px-24 py-20 pb-28 relative">
+        <div className="flex flex-col space-y-8 max-w-3xl">
+          {/* Badge de acolhedor — verde pontual */}
+          <span className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
+            <Sparkles className="h-4 w-4" />
             Urologia Avançada · Vitória da Conquista, BA
           </span>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-tight">
+          {/* Título em Fraunces (serif) — acolhedor, sem gradiente */}
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight tracking-tight font-display">
             Cuidado especializado em{" "}
-            <span className="text-cyan-300">
-              urologia com tecnologia a laser
-            </span>
+            <span className="text-primary">urologia</span>, com a{" "}
+            <span className="font-medium">tecnologia a laser</span> que você merece.
           </h1>
 
-          <p className="text-lg md:text-xl text-white/90 max-w-xl font-body font-medium">
-            Atendimento humanizado pelo Dr. Alan Pascoal e equipe multidisciplinar.
+          {/* Subtítulo — Poppins, neutro e sóbrio (info clínica) */}
+          <p className="text-lg md:text-xl text-muted-foreground max-w-xl font-body leading-relaxed">
+            Atendimento humanizado pelo <strong className="font-semibold text-foreground">Dr. Alan Pascoal</strong> e equipe multidisciplinar.
             Diagnóstico preciso, tratamentos minimamente invasivos e recuperação com conforto.
           </p>
 
@@ -42,30 +34,23 @@ const Hero = () => {
               href="https://wa.me/5577999257550"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center"
+              className="btn-primary"
             >
-              <fluent-button
-                appearance="accent"
-                style={{ height: "52px", padding: "0 32px", borderRadius: "9999px", fontSize: "14px", fontWeight: "700" }}
-              >
-                <span style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
-                  Agendar pelo WhatsApp
-                  <MessageCircle style={{ width: "16px", height: "16px" }} />
-                </span>
-              </fluent-button>
+              <MessageCircle className="h-4 w-4" />
+              Agendar pelo WhatsApp
             </a>
           </div>
 
-          {/* Trust pills */}
-          <div className="flex flex-wrap gap-4 pt-2 text-xs font-semibold text-white/80">
-            <span className="inline-flex items-center gap-2 rounded-xl border border-cyan-400/20 bg-cyan-400/5 px-3 py-2 backdrop-blur-md">
-              <Stethoscope className="h-4 w-4 text-cyan-300" /> CRM-BA 27945
+          {/* Selos de credencial — tipografia NEUTRA e sóbria (restrição do cliente) */}
+          <div className="flex flex-wrap gap-4 pt-2 text-xs font-medium text-muted-foreground">
+            <span className="inline-flex items-center gap-2 rounded-xl border border-border bg-white px-3 py-2 credential">
+              <Stethoscope className="h-4 w-4 text-primary" /> CRM-BA 27945
             </span>
-            <span className="inline-flex items-center gap-2 rounded-xl border border-violet-400/20 bg-violet-400/5 px-3 py-2 backdrop-blur-md">
-              <ShieldCheck className="h-4 w-4 text-violet-300" /> Formação internacional
+            <span className="inline-flex items-center gap-2 rounded-xl border border-border bg-white px-3 py-2 credential">
+              <ShieldCheck className="h-4 w-4 text-secondary" /> Formação internacional
             </span>
-            <span className="inline-flex items-center gap-2 rounded-xl border border-emerald-400/20 bg-emerald-400/5 px-3 py-2 backdrop-blur-md">
-              <Sparkles className="h-4 w-4 text-emerald-300" /> Tecnologia a laser
+            <span className="inline-flex items-center gap-2 rounded-xl border border-border bg-white px-3 py-2 credential">
+              <Sparkles className="h-4 w-4 text-primary" /> Tecnologia a laser
             </span>
           </div>
         </div>

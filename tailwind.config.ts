@@ -23,11 +23,8 @@ export default {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
-        background: {
-          DEFAULT: "#0f0f10",
-          light: "#1a1a1c",
-        },
-        foreground: "#FFFFFF",
+        background: 'hsl(var(--background))',
+        foreground: 'hsl(var(--foreground))',
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))'
@@ -110,8 +107,8 @@ export default {
         'slide-up': 'slide-up 0.7s ease-out forwards',
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        display: ['Chakra Petch', 'sans-serif'],
+        sans: ['Poppins', 'Segoe UI', 'system-ui', 'sans-serif'],
+        display: ['Fraunces', 'Iowan Old Style', 'Georgia', 'serif'],
       },
       fontWeight: {
         'extra-bold': '800',
