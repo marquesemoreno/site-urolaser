@@ -1,0 +1,35 @@
+<svg width="1280" height="1024" viewBox="0 0 1280 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Logo TI VDC Completo</title>
+    <desc>Reprodução vetorial do logo de image_0.png</desc>
+    <defs>
+        <style type="text/css">
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;900&family=Roboto:wght@400&display=swap');
+        </style>
+    </defs>
+    <rect width="1280" height="1024" fill="black"/>
+    <g transform="translate(150, 350) scale(1.2)">
+        <path d="M 10 0 L 250 0 L 250 70 L 180 70 L 180 300 L 80 300 L 80 70 L 10 70 Z" fill="#0099D8"/>
+        <path d="M 270 70 L 350 70 L 350 300 L 270 300 Z" fill="#FF8200"/>
+        <circle cx="310" cy="30" r="25" fill="#FF8200"/>
+        <path d="M 20 330 L 420 330 L 390 450 L 50 450 Z" fill="#0099D8"/>
+        <g fill="#000000">
+            <rect x="40" y="350" width="15" height="15"/>
+            <rect x="65" y="350" width="15" height="15"/>
+            <rect x="90" y="350" width="15" height="15"/>
+            <rect x="115" y="350" width="15" height="15"/>
+            <rect x="140" y="350" width="15" height="15"/>
+            <rect x="40" y="375" width="15" height="15"/>
+            <rect x="65" y="375" width="15" height="15"/>
+            <rect x="90" y="375" width="15" height="15"/>
+            <rect x="115" y="375" width="15" height="15"/>
+            <rect x="140" y="375" width="15" height="15"/>
+            <rect x="40" y="400" width="360" height="35"/>
+        </g>
+    </g>
+    <g font-family="'Inter', sans-serif" fill="white" transform="translate(550, 500)">
+        <text x="0" y="0" font-size="150" font-weight="900">TI</text>
+        <text x="200" y="0" font-size="150" font-weight="900" fill="white">VDC</text>
+        <text x="0" y="100" font-family="'Roboto', sans-serif" font-size="35" letter-spacing="1.5">TECNOLOGIA QUE FUNCIONA,</text>
+        <text x="0" y="150" font-family="'Roboto', sans-serif" font-size="35" letter-spacing="1.5">SUPORTE QUE RESOLVE</text>
+    </g>
+</svg>

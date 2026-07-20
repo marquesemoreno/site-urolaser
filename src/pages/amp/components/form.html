@@ -1,0 +1,42 @@
+
+<!-- Lead capture form -->
+<form method="POST" action-xhr="https://example.com/form-submit" target="_top">
+  <div class="form-group">
+    <label for="name">Nome</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+  
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required>
+  </div>
+  
+  <div class="form-group">
+    <label for="phone">Telefone</label>
+    <input type="tel" id="phone" name="phone" required>
+  </div>
+  
+  <div class="form-group">
+    <label for="company">Nome da Empresa</label>
+    <input type="text" id="company" name="company" required>
+  </div>
+  
+  <button type="submit">Solicitar Consultoria Gratuita</button>
+  
+  <!-- Form submission responses -->
+  <div submit-success>
+    <template type="amp-mustache">
+      <p style="color: #0055A5; text-align: center; margin: 16px 0;">
+        Obrigado! Entraremos em contato em breve.
+      </p>
+    </template>
+  </div>
+  
+  <div submit-error>
+    <template type="amp-mustache">
+      <p style="color: #CC3333; text-align: center; margin: 16px 0;">
+        Ocorreu um erro. Tente novamente ou entre em contato por WhatsApp.
+      </p>
+    </template>
+  </div>
+</form>

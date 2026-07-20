@@ -1,0 +1,233 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&display=swap');
+
+:root {
+  --font-display: "Chakra Petch", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Inter", "Segoe UI", system-ui, sans-serif;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Urolaser: ciano (laser) + violeta (premium) + esmeralda (saúde) */
+  :root {
+    --background: 220 33% 4%;
+    --foreground: 195 40% 98%;
+
+    --card: 199 60% 9%;
+    --card-foreground: 195 40% 98%;
+
+    --popover: 199 60% 9%;
+    --popover-foreground: 195 40% 98%;
+
+    /* Primário: ciano elétrico (laser/tecnologia) */
+    --primary: 187 92% 48%;
+    --primary-foreground: 220 33% 4%;
+
+    --secondary: 262 83% 66%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 199 40% 14%;
+    --muted-foreground: 196 20% 70%;
+
+    --accent: 160 84% 45%;
+    --accent-foreground: 220 33% 4%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 195 40% 98%;
+
+    --border: 190 60% 40%;
+    --input: 199 40% 14%;
+    --ring: 187 92% 48%;
+
+    --radius: 0.7rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Títulos: Space Grotesk (personalidade) — corpo: Inter (limpo) */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply tracking-tight;
+    font-weight: 700;
+  }
+
+  p, a, span, li, label, input, textarea, button {
+    font-family: var(--font-body);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-transparent border border-white/20 text-white py-3 px-8 rounded-full font-semibold hover:bg-white/10 transition-all duration-300 inline-block;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent text-white py-3 px-8 rounded-full font-semibold hover:text-white/80 transition-all duration-300 inline-block;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl mb-8 text-white tracking-tight;
+    font-family: var(--font-display);
+    font-weight: 700;
+  }
+
+  .section-subtitle {
+    @apply text-xl text-white/80 mb-16 max-w-3xl mx-auto font-medium;
+  }
+
+  .container-padding {
+    @apply px-8 md:px-16 lg:px-24 py-24 md:py-32;
+  }
+
+  .service-card {
+    @apply p-6 rounded-lg border border-white/10 bg-background-light/50 hover:bg-background-light transition-all duration-300 flex flex-col h-full;
+  }
+
+  .service-icon {
+    @apply text-white mb-4;
+  }
+
+  /* Custom prose styles for blog articles */
+  .prose-invert {
+    @apply text-white/90;
+  }
+
+  .prose-invert h2 {
+    @apply text-white text-2xl mt-14 mb-5 font-bold tracking-tight;
+    font-family: var(--font-display);
+  }
+
+  .prose-invert h3 {
+    @apply text-white text-xl mt-10 mb-4 font-semibold;
+    font-family: var(--font-display);
+  }
+
+  .prose-invert p {
+    @apply text-white/85 leading-relaxed mb-6 text-lg;
+  }
+
+  .prose-invert ul {
+    @apply mb-8 space-y-2;
+  }
+
+  .prose-invert li {
+    @apply text-white/85 leading-relaxed;
+  }
+
+  .prose-invert strong {
+    @apply text-white font-bold;
+  }
+
+  /* Caixa de destaque (callout) — quebra a monotonia do texto */
+  .blog-callout {
+    @apply my-8 rounded-2xl border border-purple-500/30 bg-gradient-to-r from-purple-600/15 to-blue-600/10 p-6 backdrop-blur-md;
+  }
+  .blog-callout p {
+    @apply text-white/90 mb-0 text-lg leading-relaxed;
+  }
+  .blog-callout strong {
+    @apply text-white;
+  }
+
+  /* Tabela de comparação — melhor que lista corrida */
+  .blog-table {
+    @apply w-full my-8 border-collapse overflow-hidden rounded-xl text-left text-white/90;
+  }
+  .blog-table th {
+    @apply bg-white/10 px-4 py-3 text-sm font-semibold text-white border-b border-white/15;
+  }
+  .blog-table td {
+    @apply px-4 py-3 text-sm border-b border-white/10 text-white/85;
+  }
+  .blog-table tr:hover td {
+    @apply bg-white/5;
+  }
+
+  /* Citação / destaque */
+  .blog-callout-quote {
+    @apply my-8 border-l-4 border-purple-400 bg-white/5 py-4 px-6 rounded-r-xl text-white/90 text-lg italic;
+  }
+
+  /* Vibrant design classes (marca: roxo/azul) */
+  .btn-gradient {
+    @apply bg-gradient-to-r from-cyan-400 to-violet-500 text-white rounded-full font-bold hover:shadow-[0_0_24px_rgba(34,211,238,0.55)] transition-all;
+  }
+
+  .glass-card {
+    @apply bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-cyan-300 to-violet-400 bg-clip-text text-transparent;
+  }
+
+  .glow-cyan {
+    @apply hover:shadow-[0_0_30px_rgba(34,211,238,0.4)] transition-all;
+  }
+
+  /* ---------- Identidade rede/infraestrutura ---------- */
+
+  /* Textura de grid fino e discreto (usado em seções e páginas internas) */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, rgba(34,211,238,0.10) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(139,92,246,0.10) 1px, transparent 1px);
+    background-size: 46px 46px;
+  }
+  .bg-grid-fade {
+    -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, black 25%, transparent 90%);
+    mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, black 25%, transparent 90%);
+  }
+
+  /* Separador de seção com "linha de conexão" */
+  .net-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(168,85,247,0.5), rgba(59,130,246,0.5), transparent);
+  }
+
+  /* Utilitários de fonte */
+  .font-display { font-family: var(--font-display); }
+  .font-body { font-family: var(--font-body); }
+}
+
+/* Animações sutis da topologia de rede (só no hero) */
+.net-line {
+  stroke-dasharray: 3 3;
+  animation: net-pulse 7s ease-in-out infinite;
+}
+.net-node {
+  animation: net-node 5.5s ease-in-out infinite;
+}
+.net-breathe {
+  background: radial-gradient(circle at 72% 32%, rgba(34,211,238,0.10), transparent 55%);
+  animation: net-breathe 10s ease-in-out infinite;
+}
+@keyframes net-pulse {
+  0%, 100% { opacity: 0.22; }
+  50% { opacity: 0.6; }
+}
+@keyframes net-node {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 1; }
+}
+@keyframes net-breathe {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 0.85; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .net-line, .net-node, .net-breathe { animation: none; }
+}

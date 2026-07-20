@@ -1,0 +1,10 @@
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <title>TI - Azul (original Gemini)</title>
+  <g transform="translate(75, 100) scale(1.0)">
+    <!-- T azul -->
+    <path d="M 10 0 L 250 0 L 250 70 L 180 70 L 180 300 L 80 300 L 80 70 L 10 70 Z" fill="#0099D8"/>
+    <!-- i laranja -->
+    <path d="M 270 70 L 350 70 L 350 300 L 270 300 Z" fill="#FF8200"/>
+    <circle cx="310" cy="30" r="25" fill="#FF8200"/>
+  </g>
+</svg>

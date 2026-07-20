@@ -1,0 +1,46 @@
+
+<!doctype html>
+<html amp lang="pt-BR">
+<head>
+  <!-- Include AMP and required scripts -->
+  {{> head}}
+  
+  <!-- Preconnect to required origins -->
+  <link rel="preconnect" href="https://cdn.ampproject.org">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Schema.org structured data -->
+  {{> schema}}
+  
+  <!-- Custom styles -->
+  <style amp-custom>
+    {{> base.css}}
+    {{> header.css}}
+    {{> content.css}}
+    {{> benefits.css}}
+    {{> form.css}}
+    {{> links.css}}
+    {{> footer.css}}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  {{> header}}
+  
+  <!-- Main content with headline and benefits -->
+  {{> main-content}}
+  
+  <div class="container">
+    <div class="card">
+      <!-- Lead capture form -->
+      {{> form}}
+      
+      <!-- Quick action links -->
+      {{> quick-links}}
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  {{> footer}}
+</body>
+</html>

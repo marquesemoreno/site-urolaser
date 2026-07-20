@@ -1,0 +1,30 @@
+
+/* Benefits list */
+.benefits {
+  margin: 24px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.benefits li {
+  margin-bottom: 16px;
+  padding: 12px 12px 12px 40px;
+  position: relative;
+  background-color: #F8FAFC;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+.benefits li:before {
+  content: "✓";
+  position: absolute;
+  left: 12px;
+  color: #0055A5;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}

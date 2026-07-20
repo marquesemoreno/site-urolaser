@@ -1,0 +1,28 @@
+
+/* Quick links grid */
+.link-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+  color: #333333;
+  padding: 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  border: 1px solid #dddddd;
+  text-align: center;
+}
+
+.link.whatsapp {
+  background-color: #25D366;
+  border: none;
+  color: white;
+}
